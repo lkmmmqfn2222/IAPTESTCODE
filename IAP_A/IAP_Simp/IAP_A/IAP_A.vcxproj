@@ -77,6 +77,7 @@
   <ItemGroup />
   <ItemGroup>
     <ClCompile Include="bsp.c" />
+    <ClCompile Include="common.c" />
     <ClCompile Include="delay.c" />
     <ClCompile Include="iap.c" />
     <ClCompile Include="main.c" />
@@ -85,13 +86,16 @@
     <ClCompile Include="stmflash.c" />
     <ClCompile Include="sys.c" />
     <ClCompile Include="system_stm32f10x.c" />
+    <ClCompile Include="ymodem.c" />
     <ClInclude Include="bsp.h" />
+    <ClInclude Include="common.h" />
     <ClInclude Include="delay.h" />
     <ClInclude Include="iap.h" />
     <ClInclude Include="menu.h" />
     <ClInclude Include="myprintf.h" />
     <ClInclude Include="stmflash.h" />
     <ClInclude Include="sys.h" />
+    <ClInclude Include="ymodem.h" />
     <None Include="stm32.mak" />
     <ClCompile Include="$(BSP_ROOT)\STM32F1xxxx\StartupFiles\startup_stm32f103xe.c" />
     <ClCompile Include="$(BSP_ROOT)\STM32F1xxxx\STM32F10x_StdPeriph_Driver\src\misc.c" />

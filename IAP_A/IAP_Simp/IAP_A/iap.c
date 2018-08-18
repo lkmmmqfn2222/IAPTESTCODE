@@ -96,11 +96,11 @@ void Refresh_Thread(void)
 {
 	if (((*(vu32*)(FLASH_APP1_ADDR + 4)) & 0xFF000000) == 0x08000000)// 0X08XXXXXX.
 	{
-		iap_load_app(FLASH_APP1_ADDR);  //Excute FLASH APP CODE
+		iap_load_app(FLASH_APP1_ADDR);  //Execute FLASH APP CODE
 	}
 	else
 	{
-		myprint("Flash Addr Is Error!");
+		myprint("Flash Address Is Error!");
 		delay_ms(500);
 	}
 }

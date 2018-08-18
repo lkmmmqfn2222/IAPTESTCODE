@@ -39,6 +39,12 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ymodem.c">
+      <Filter>Resource files\APP</Filter>
+    </ClCompile>
+    <ClCompile Include="common.c">
+      <Filter>Resource files\APP</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="system_stm32f10x.c">
@@ -260,6 +266,12 @@
       <Filter>Resource files\APP</Filter>
     </ClInclude>
     <ClInclude Include="menu.h">
+      <Filter>Resource files\APP</Filter>
+    </ClInclude>
+    <ClInclude Include="ymodem.h">
+      <Filter>Resource files\APP</Filter>
+    </ClInclude>
+    <ClInclude Include="common.h">
       <Filter>Resource files\APP</Filter>
     </ClInclude>
   </ItemGroup>
