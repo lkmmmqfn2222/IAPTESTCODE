@@ -5,25 +5,7 @@
 
 uint8_t FileName[FILE_NAME_LENGTH];
 
-/**
-* @brief  Test to see if a key has been pressed on the HyperTerminal
-* @param  key: The key pressed
-* @retval 1: Correct
-*         0: Error
-*/
-uint32_t SerialKeyPressed(uint8_t *key)
-{
 
-	if (USART_GetFlagStatus(EVAL_COM1, USART_FLAG_RXNE) != RESET)
-	{
-		*key = (uint8_t)EVAL_COM1->DR;
-		return 1;
-	}
-	else
-	{
-		return 0;
-	}
-}
 
 /**
 * @brief  Receive byte from sender
@@ -204,7 +186,7 @@ int32_t Ymodem_Receive(uint8_t *buf)
 									return -1;
 								}
 								/* erase user application area */
-								FLASH_If_Erase(APPLICATION_ADDRESS);
+								Flash_If_Erase(APPLICATION_ADDRESS);
 								Send_Byte(ACK);
 								Send_Byte(CRC16);
 							}

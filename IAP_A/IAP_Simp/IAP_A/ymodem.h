@@ -35,7 +35,7 @@
 
 
 /* Exported functions ------------------------------------------------------- */
-uint32_t SerialKeyPressed(uint8_t *key);
+
 static  int32_t Receive_Byte(uint8_t *c, uint32_t timeout);
 static uint32_t Send_Byte(uint8_t c);
 static int32_t Receive_Packet(uint8_t *data, int32_t *length, uint32_t timeout);
@@ -43,6 +43,7 @@ void Ymodem_SendPacket(uint8_t *data, uint16_t length);
 int32_t Ymodem_Receive(uint8_t *buf);
 void Ymodem_PrepareIntialPacket(uint8_t *data, const uint8_t* fileName, uint32_t *length);
 void Ymodem_PreparePacket(uint8_t *SourceBuf, uint8_t *data, uint8_t pktNo, uint32_t sizeBlk);
+uint8_t Ymodem_Transmit(uint8_t *buf, const uint8_t* sendFileName, uint32_t sizeFile);
 uint16_t UpdateCRC16(uint16_t crcIn, uint8_t byte);
 
 #endif

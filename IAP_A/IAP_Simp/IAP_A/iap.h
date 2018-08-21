@@ -9,8 +9,8 @@ void iap_load_app(u32 appxaddr);
 void IAPWriteAppbin(u32 appxaddr, u8 *appbuf, u32 appsize);
 void Jump_To_APP(uint32_t appxaddr);
 
-void Serial_Download(void);
-void Serial_Upload(void);
-void Refresh_Thread(void);
+//void Serial_Download(void);
+//void Serial_Upload(void);
+//void Refresh_Thread(void);
 
 #endif

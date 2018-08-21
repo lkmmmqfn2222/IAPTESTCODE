@@ -70,7 +70,7 @@ void STMFLASH_Write_NoCheck(u32 WriteAddr, u16 *pBuffer, u16 NumToWrite);
 void STMFLASH_Write(u32 WriteAddr, u16 *pBuffer, u16 NumToWrite);
 void STMFLASH_Read(u32 ReadAddr, u16 *pBuffer, u16 NumToRead);
 void Test_Write(u32 WriteAddr, u16 WriteData);
-
+uint32_t FLASH_If_DisableWriteProtection(void);
 void FLASH_If_Init(void);
 uint32_t Flash_If_Erase(uint32_t StartSector);
 static uint32_t GetSector(uint32_t Address);

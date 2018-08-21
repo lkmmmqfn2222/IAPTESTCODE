@@ -232,3 +232,24 @@ uint32_t FLASH_If_Write(__IO uint32_t *FlashAddress, uint32_t *Data, uint32_t Da
 	return 0;
 }
 
+/*
+*@Name FLASH_If_DisableWriteProtection
+*@brief Disable FLASHProtectionWriteProtection
+*		When you want to erase your flash at the status
+		of a ReadProtection,the whole flash will be erased.
+		so,you need to disable the read protect before you write it.
+*@param 
+*@retval 1: Disable Failed
+*		 0: Disabled 
+*/
+
+uint32_t FLASH_If_DisableWriteProtection(void)
+{
+	/*FLASH_GetReadOutProtectionStatus==SET protected */
+	if (FLASH_GetReadOutProtectionStatus()!=RESET)
+	{
+		FLASH_Unlock();
+		FLASH_ReadOutProtection(DISABLE);
+	}
+	return FLASH_GetReadOutProtectionStatus();
+}

@@ -62,35 +62,35 @@ void Jump_To_APP(uint32_t appxaddr)
 	Jump2APP();
 }
 
+//
+//void Serial_Download(void)
+//{
+//	if (((*(vu32*)(USART_RX_BUF + 4)) & 0xF000000) == 0x8000000)//0X08XXXXXX.
+//	{
+//		IAPWriteAppbin(FLASH_APP1_ADDR, USART_RX_BUF, Applength);  
+//	}
+//}
 
-void Serial_Download(void)
-{
-	if (((*(vu32*)(USART_RX_BUF + 4)) & 0xF000000) == 0x8000000)//0X08XXXXXX.
-	{
-		IAPWriteAppbin(FLASH_APP1_ADDR, USART_RX_BUF, Applength);  
-	}
-}
 
-
-void Serial_Upload(void)
-{
-	u8 temp;
-	USART_DeInit(USART1);
-	USART_Cmd(USART1, DISABLE);
-	delay_ms(10);
-	UART_Init(115200);
-	memset(USART_RX_BUF, 0, sizeof(u8)*USART_REC_LEN);
-	while (1)
-	{
-		delay_ms(1000);
-		myprint("Please Send Image File Inside 5S\r\n");
-		delay_ms(5000);
-		delay_ms(5000);
-		Applength = USART_RX_CNT;
-		break;
-	}
-		
-}
+//void Serial_Upload(void)
+//{
+//	u8 temp;
+//	USART_DeInit(USART1);
+//	USART_Cmd(USART1, DISABLE);
+//	delay_ms(10);
+//	UART_Init(115200);
+//	memset(USART_RX_BUF, 0, sizeof(u8)*USART_REC_LEN);
+//	while (1)
+//	{
+//		delay_ms(1000);
+//		myprint("Please Send Image File Inside 5S\r\n");
+//		delay_ms(5000);
+//		delay_ms(5000);
+//		Applength = USART_RX_CNT;
+//		break;
+//	}
+//		
+//}
 
 void Refresh_Thread(void)
 {

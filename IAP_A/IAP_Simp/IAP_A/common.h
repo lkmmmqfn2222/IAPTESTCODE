@@ -18,6 +18,7 @@
 #define SerialPutString(x) Serial_PutString((uint8_t*)(x))
 
 /* Exported functions ------------------------------------------------------- */
+void Serial_PutString(uint8_t *s);
 void Int2Str(uint8_t *str, int32_t intnum);
 uint32_t Str2Int(uint8_t *inputstr, int32_t *intnum);
 uint32_t GetIntegerInput(int32_t * num);
