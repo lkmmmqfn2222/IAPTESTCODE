@@ -17,9 +17,9 @@ int main()
 	for (int i=0;i<=5;i++)
 	{
 		GPIO_WriteBit(GPIOD, GPIO_Pin_2, Bit_SET);
-		delay_ms(1000);
+		delay_ms(500);
 		GPIO_WriteBit(GPIOD, GPIO_Pin_2, Bit_RESET);
-		delay_ms(1000);
+		delay_ms(500);
 	}
 	while (1)
 	{
