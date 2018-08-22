@@ -106,7 +106,7 @@ void UART_Init(u32 bound)
 	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
 	NVIC_Init(&NVIC_InitStructure);
 	
-	USART_ITConfig(USART1, USART_IT_RXNE, ENABLE);
+	USART_ITConfig(USART1, USART_IT_RXNE, DISABLE);
 	USART_Cmd(USART1, ENABLE);
 }
 

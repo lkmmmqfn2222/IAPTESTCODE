@@ -8,6 +8,9 @@
 #pragma clang diagnostic push
 
 #pragma clang diagnostic ignored "-Wreserved-id-macro"
+#ifndef STM32F10X_MD
+#define STM32F10X_MD 1
+#endif
 #ifndef __DBL_MIN_EXP__
 #define __DBL_MIN_EXP__ (-1021)
 #endif
@@ -290,9 +293,6 @@
 #ifndef __USER_LABEL_PREFIX__
 #define __USER_LABEL_PREFIX__ 
 #endif
-#ifndef STM32F10X_HD
-#define STM32F10X_HD 1
-#endif
 #ifndef __STDC_HOSTED__
 #define __STDC_HOSTED__ 1
 #endif
@@ -335,9 +335,6 @@
 #ifndef __DEC32_MAX__
 #define __DEC32_MAX__ 9.999999E96DF
 #endif
-#ifndef STM32F103RCTx
-#define STM32F103RCTx 1
-#endif
 #ifndef __DA_IBIT__
 #define __DA_IBIT__ 32
 #endif
@@ -361,6 +358,9 @@
 #endif
 #ifndef __UACCUM_MAX__
 #define __UACCUM_MAX__ 0XFFFFFFFFP-16UK
+#endif
+#ifndef STM32F103R8
+#define STM32F103R8 1
 #endif
 #ifndef __PTRDIFF_WIDTH__
 #define __PTRDIFF_WIDTH__ 32

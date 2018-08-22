@@ -162,6 +162,7 @@ uint32_t SerialKeyPressed(uint8_t *key)
 	if (USART_GetFlagStatus(USART1, USART_FLAG_RXNE) != RESET)
 	{
 		*key = (uint8_t)USART1->DR;
+		USART_ClearFlag(USART1, USART_FLAG_RXNE);
 		return 1;
 	}
 	else
