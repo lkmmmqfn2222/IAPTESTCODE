@@ -216,7 +216,7 @@ uint32_t FLASH_If_Write(__IO uint32_t *FlashAddress, uint32_t *Data, uint32_t Da
 		if (FLASH_ProgramWord(*FlashAddress,*(uint32_t*)(Data+i))==FLASH_COMPLETE)
 		{
 			/* Check the written value */
-			if (*(uint32_t*)FlashAddress!=*(uint32_t*)Data)
+			if (*(uint32_t*)*FlashAddress != *(uint32_t*)(Data + i))
 			{
 				/*Flash content doesn't match SRAM content*/
 				return 2;
